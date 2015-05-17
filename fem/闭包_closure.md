@@ -56,6 +56,37 @@ function checkScope() {
 checkScope()();
 ```
 
+### Another simple
+
+```
+var name = "hhh";
+var student = {
+	name : "Rijn",
+	getName : function(){
+		return function(){
+			return this.name;
+		};
+	}
+};
+console.log(student.getName()());
+```
+
+改成如下代码呢
+
+```
+var name = "hhh";
+var student = {
+	name : "Rijn",
+	getName : function(){
+		var that = this;
+		return function(){
+			return that.name;
+		};
+	}
+};
+console.log(student.getName()());
+```
+
 ## Advantages of closure
 
 * 希望一个变量长期驻扎在内存当中
@@ -250,21 +281,6 @@ function closure(){
     };
     oDiv = null;
 }
-```
-
-## Final
-
-```
-var name = "trigkit4";
-var student = {
-	name : "Rijn",
-	getName : function(){
-		return function(){
-			return this.name;
-		};
-	}
-};
-console.log(student.getName()());
 ```
 
 ## Thanks
