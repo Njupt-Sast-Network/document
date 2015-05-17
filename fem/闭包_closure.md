@@ -268,5 +268,11 @@ console.log(student.getName()());
 ```
 
 ## Thanks
+
+* http://www.kryogenix.org/code/browser/secrets-of-javascript-closures/secrets_of_javascript_closures.pdf
+* http://www.ruanyifeng.com/blog/2009/08/learning_javascript_closures.html
+
+## Author
+
 * `Rijn`
 * `2015.05.18`
