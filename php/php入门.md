@@ -75,6 +75,7 @@ echo函数会输出字符串，php中字符串以一对双引号包围。
 
 
 >如果在XAMPP中无法启动Apache，并且看到了类似于这样的提示：
+
 ```
 21:48:34  [Apache] 	Problem detected!
 21:48:34  [Apache] 	Port 443 in use by ""C:\Program Files (x86)\VMware\VMware Workstation\vmware-hostd.exe" -u "C:\ProgramData\VMware\hostd\config.xml"" with PID 1956!
@@ -83,7 +84,9 @@ echo函数会输出字符串，php中字符串以一对双引号包围。
 21:48:34  [Apache] 	or reconfigure Apache and the Control Panel to listen on a different port
 
 ```
+
 >那么说明VMWare占用了Apache使用的443端口，请前往VMWare的首选项->共享虚拟机中禁用共享，或者改用其他空闲端口。
+
 
 如果一切正常的话，应该能在浏览器中看到我们~~喜闻乐见~~的Hello,World了。
 ![喜闻乐见的Hello,World](https://raw.githubusercontent.com/Njupt-Sast-Network/document/master/php/pic/gettingstarted1.png)
