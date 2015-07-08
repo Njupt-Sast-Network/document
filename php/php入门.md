@@ -183,7 +183,7 @@ z=x+y
 在 PHP 中，有三种数组类型：
  * 索引数组 - 带有数字索引的数组
  * 关联数组 - 带有指定键的数组
- * 多维数组 - 包含一个或多个数组的数组
+ * 多维数组 - 包含一个或多个数组的数组       
 以下简要介绍一下索引数组和关联数组。
 
 
@@ -215,7 +215,6 @@ z=x+y
 ?>
 ```
 
-However, this is when things start to get different. When declaring an array, we have to use array(). This basically tells PHP that $array is an array and not something else, such as a regular old variable.
 
 从这里开始有点小小的不一样了。PHP中，定义数组的时候需要使用`array()`。它告诉php`$myarray`是一个数组，而不是别的什么东西，比如我们之前见到的普通变量。
 
@@ -228,7 +227,7 @@ However, this is when things start to get different. When declaring an array, we
 ?>
 ```
 
-因为这里我们输入的是数值，所以不需要加双引号。
+>因为这里我们输入的是数值，所以不需要加双引号。
 
 定义了数组以后，我们可以这样使用数组中的元素。
 ```php
@@ -253,6 +252,8 @@ However, this is when things start to get different. When declaring an array, we
 	则可以使用多行注释。
 	*/
 ?>
+```
+
 
 ###关联数组
 
