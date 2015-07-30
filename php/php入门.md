@@ -358,5 +358,56 @@ if ($t < 10) {
 建议直接参阅[PHP官方手册](http://php.net/manual/zh/)和[W3School](http://www.w3school.com.cn/php/)的相关文档。
 
 ###循环
+>和C语言类似，PHP主要有(do)-while和for两种循环  
+
+**while循环**
+
+```php
+<?php 
+$x=1; 
+
+while($x<=5) {
+	echo "这个数字是：$x\n";
+	$x++;
+} 
+?>
+```
+
+**for循环**
+```php
+<?php 
+for ($x=0; $x<=10; $x++) {
+  echo "数字是：$x <br>";
+} 
+?>
+```
+
+>此外PHP中还有适用于遍历数组的foreach循环，用法可以参考[这里](http://php.net/manual/zh/control-structures.foreach.php)
 
 ##函数
+>函数是在一个程序中可重复使用的代码片段，可以省下很多复制粘贴的活儿。PHP中有很多内置的函数，下面简单介绍几个来示范函数的使用方法。更多的内置函数使用方法可以参考[官方PHP手册](http://php.net/manual/zh/)
+
+**`strlen()`函数：**
+
+`strlen()`是PHP中用的最多的字符串函数之一。传给这个函数一个字符串，或者包含字符串的变量，将返回这个字符串的字符数。例如：
+```php
+<?php
+$len = strlen("blahblah");//在这里随便打点字试试
+print $len;
+?>
+```
+
+>但是`strlen()`并不能很好地处理中文等字符，要计算中文的字数应该使用`mb_strlen()`,用法基本一样。
+
+**`round()`函数：**
+
+`round()`函数用来对数字四舍五入。
+```php
+<?php
+    $r=round(3.1415926);
+    echo $r;//输出3
+
+    $r2=round(3.1415926,3);//也可以在第二个参数的位置指定保留几位小数
+    echo $r2;//输出3.142
+?>
+```
