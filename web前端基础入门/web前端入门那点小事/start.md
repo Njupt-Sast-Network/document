@@ -79,9 +79,9 @@ body里才是我们要写内容的地方。
 
 ###常用标签列举
 我列举下常用的各种标签，大家可以重点先熟悉这几个标签。
+```html
 html body head title meta link script
 
-```html
 div
 
 a
