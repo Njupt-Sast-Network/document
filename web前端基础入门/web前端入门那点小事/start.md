@@ -81,17 +81,27 @@ body里才是我们要写内容的地方。
 我列举下常用的各种标签，大家可以重点先熟悉这几个标签。
 html body head title meta link script
 
+```html
 div
-a
-img
-span
-p
-table tr td
-h1 h2 h3 h4 h5 h6
-strong em i
-ul li
-iframe
 
+a
+
+img
+
+span
+
+p
+
+table tr td
+
+h1 h2 h3 h4 h5 h6
+
+strong em i
+
+ul li
+
+iframe
+```
 大家把这些标签的用法都熟悉了，就可以通过各种标签组合你们想要的页面了。
 [标签列表文档](http://www.w3cschool.cn/index-54.html)
 
