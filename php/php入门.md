@@ -3,10 +3,6 @@ PHP入门教程
 >PHP 是一种创建动态交互性站点的强有力的服务器端脚本语言，本文档将会介绍一些基础的PHP知识。学习完成本教程后，将获得建立简单动态网站的能力。本文档需要一点点HTML的基础知识，可以先参考这篇[前端入门文档](https://github.com/Njupt-Sast-Network/document/blob/master/fem/fem入门那点小事/home.md)。
 
 ##简介
-学习PHP之前，我们首先要了解web前端和后端的关系 
-{
-待填坑，可以讲讲从静态网页发展到动态网页，数据的持久储存blahblah
-}
 PHP的全称为：PHP：Hypertext Preprocessor，即“PHP：超文本预处理器”，是一种开源的通用计算机脚本语言，尤其适用于网络开发并可嵌入HTML中使用。易于学习，入门简单是其特点之一。
 
 客户端在向web服务器请求php页面的时候，服务器上的php解析器通过运行php脚本中的php代码来生成纯html页面，并将其传输给客户端。最终客户端收到的html页面中将不包含php代码。若需要在自己的电脑上进行php开发，就需要在电脑上安装php解析器。
@@ -389,7 +385,7 @@ for ($x=0; $x<=10; $x++) {
 
 **`strlen()`函数：**
 
-`strlen()`是PHP中用的最多的字符串函数之一。传给这个函数一个字符串，或者包含字符串的变量，将返回这个字符串的字符数。例如：
+`strlen()`是PHP中用的最多的字符串函数之一。传给这个函数一个字符或者包含字符串的变量作为参数，将返回这个字符串的字符数。例如：
 ```php
 <?php
 $len = strlen("blahblah");//在这里随便打点字试试
@@ -411,3 +407,10 @@ print $len;
     echo $r2;//输出3.142
 ?>
 ```
+
+##参考资料
+1. [PHP官方手册](http://php.net/manual/zh/)
+
+2. [W3School](http://www.w3school.com.cn/index.html)
+
+3. [Codecademy](http://www.codecademy.com/)
