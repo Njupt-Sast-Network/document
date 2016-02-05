@@ -1,4 +1,4 @@
-#### 用更多的Angular的魔法大力提升你的 Web App 开发效率
+## 用更多的Angular的魔法大力提升你的 Web App 开发效率
 
 @(翻译)[angular|毕设翻译]
 
@@ -7,7 +7,7 @@
 这篇文章涵盖了更多关于angular的隐藏的宝藏和开发的技巧方法去加强你的angularjs开发。如果你想成为一个angularjs开发的专家，最好阅读这篇文章。
 
 
-#####关于这篇文章
+###关于这篇文章
 
 这篇文章是前一篇《利用angular去增强你的web应用开发》的续篇。那些还没有阅读过前一篇的的读者，要确保已经非常熟悉前一篇所讲的内容，你才能深入的理解我们这篇文章的内容。因为我们这篇文章所有的基础知识都是基于前篇文章中的内容的。
 
@@ -20,7 +20,7 @@ var App = angular.module('YOUR_APP_NAME', ['ngResource']);
 
 angularjs很庞大并且提供了许多还没被他的社区开发者发现的新特性。与其说这是隐藏的特性，不如说这些特性的使用方法还没有在互联网上广泛的覆盖开。本文就提到了很多。本文会介绍很多有用的技巧和方法，能够让你开发angularjs驱动的web应用更有效果，即使你已经用到了很多高效的方法。
 
-#####Angularjs 和 IE浏览器
+###Angularjs 和 IE浏览器
 
 在我们深入讨论更多关于Angularjs的独特技巧之前，一些关于IE浏览器的信息应该被先提及。
 
@@ -28,7 +28,7 @@ angularjs很庞大并且提供了许多还没被他的社区开发者发现的�
 
 Angularjs提到定制标签的使用在IE8中是支持的并且他强调Angularjs确实在IE8中是可以使用任意的定制标签的。我不相信IE8完全的遵循自定义标签因为要让HTML5标签能够更好的跑在IE8上，需要一个特殊的HTML5 shiv文件。因此，你将需要去在你的文件开头定义每一个你用到的标签（例如```document.createElement('ng-pluralize')```,```document.createElement('ng-view')```,等）。因此如果你能解决用到的自定义标签或者你可以完全的避免IE8那就坚定的去使用标准的HTML/HTML5的标签，那样会更好一点。
 
-#####数据绑定和$scope作用域改变
+###数据绑定和$scope作用域改变
 
 数据绑定通过各种方式绑定包含在$scope变量里的的值的改变去响应DOM的变化。不管他是直接的用花括号{{some_value}}，还是直接写在一个属性里还是用一种绑定模型，Angularjs就是为了把这件事做的更好而设计的。
 
@@ -39,7 +39,7 @@ Angularjs控制在```$scope```中的改变每当一个主要的事件在程序�
 
 你需要考虑任何一个应用会间歇性的一遍又一遍地检查相同的数据将会很快的使运行效率降低，但是没有。AngularJS在与其他的MVC的框架里表现得非常的好，并且相同的脏值检查的方式在一些视频游戏程序里是非常常见的。
 
-#####根作用域和作用域的继承
+###根作用域和作用域的继承
 
 $rootScope扮演了一个所有的```$scope```对象的父层作用域对象的角色这就意味着当一个controller被执行之后这个$scope变量已经依据```$rootScope```对象里的内容通过链接/拷贝的方式生成了。最好的方法就是把```$scope```变量作为一个```$rootScope```的子类去理解（```$scope```是从```$rootScope```继承而来）。理解了这个对你在你的整个应用里想去新增一些新的方法到你的作用域变量上是非常有用的（例如session信息、标记和状态等等）。
 
@@ -80,7 +80,7 @@ Ctrl.$inject = ['$scope'];
 
 
 
-#####```$apply```, ```$digest```和```$$phaase```
+###```$apply```, ```$digest```和```$$phaase```
 
 
 这是去理解AngularJS的最重要的一部分，在将来的某个时间某个地点你需要去整合一个第三方的的app到你的网站里你会发现他会打破Angular的规范或者不会被Angular所接纳。为了实现这个需求，你将需要去理解```$digest```和```$apply```是怎么工作的。
@@ -127,12 +127,12 @@ var changeLocation = function(url, force) {
 
 这需要你确保你的网页URl无论如何都会得到改变
 
-#####Services与Controllers之间的通信
+###Services与Controllers之间的通信
 
 无论何时你的应用中发生了会对controller和directive造成影响的事情，你最好使用Angular提供的$emit,$on和$broadcast方法
 比如这个例子，包含了权限和会话改变（就好像用户退出或者某个标志位？？改变的时候）
 
-当你需要一个 父controller或scope 通知所有孩子controller某一改变时，你可以使用$broadcast方法
+当你需要一个 父controller或scope 通知所有子controller某一改变时，你可以使用$broadcast方法
 
 ```javascript
 //get the topmost scope
@@ -195,7 +195,7 @@ Ctrl.$inject = ['$scope'];
 使用这些controller内通信方法，就不需要创建controoler间的相关耦合代码。
 
 
-#####Controller和Routes的附加特性
+###Controller和Routes的附加特性
 
 AngularJS同样带来了一些很多人不知道的方法用来处理在controllers之间的请求通信。但是，在我降到这个之前我想重点指出一个可供选择的创建controller的方式。
 
@@ -237,10 +237,11 @@ App.config(['$routeProvider',function($routeProvider) {
 ```
 
 当应用按照它的方式路由到了/some/page/with/an/:id，Angular讲开始解析这些呈现在resolve:{}块中的依赖项。一旦就绪（当所有promise完成），请求就会被转发到controller并正常工作。
-如果你想把你的数据请求与controller解耦，这是很有帮助的。
-并且，在resolve函数中，你也可以像往常一样注入service（如果你需要某些数据在controller执行之前被优先获取，这也很有用）。需要注意的是，如果你把controller作为ng-controller属性来设置，那resolve块就会被跳过而不执行（因为它依赖于页面中的route而不是controller绑定【注：应该是指需要route根据path进行调用，而不是根据ng-controller进行直接执行】）
 
-```$route```变量能够被直接注入到任何的controller里，并且能被用来得到当前路由的信息
+如果你想把你的数据请求与controller解耦，这是很有帮助的。
+并且，在resolve函数中，你也可以像往常一样注入service（如果你需要某些数据在controller执行之前被优先获取，这也很有用）。需要注意的是，如果你把controller作为ng-controller属性来设置，那resolve块就会被跳过而不执行（因为它依赖于页面中的route而不是controller绑定）
+
+$route变量能够被直接注入到任何的controller里，并且能被用来得到当前路由的信息
 
 
 ```javascript
@@ -252,11 +253,11 @@ var Ctrl = function($scope, $route) {
 Ctrl.$inject = ['$scope','$route'];
 ```
 
-#####你应该使用自定义Services
+###你应该使用自定义Services
 
-自定义services能够使Angular项目代码高可管理性与简易测试性。通过使用 Angular的依赖注入功能，你可以在你的应用的任何地方构造一个自定义service，然后非常简单地在别的地方引用它。举个一个能够体现shared（共享？？） service价值的简单例子，是使用这一概念来构造一个适用于你的应用的特殊的$http service
+自定义services能够使Angular项目代码高可管理性与简易测试性。通过使用 Angular的依赖注入功能，你可以在你的应用的任何地方构造一个自定义service，然后非常简单地在别的地方引用它。举个一个能够体现service共享价值的简单例子，是使用这一概念来构造一个适用于你的应用的特殊的$http service。
 
-```javascript
+```
 App.factory('myHttp',['$http',function($http) {
   return function() {
     get : function(url, success, fail) {
@@ -266,7 +267,6 @@ App.factory('myHttp',['$http',function($http) {
     }
   };
 }]);
-
 //this service can now be called by doing...
 $myHttp.get('/path', function(data) {
   alert(data);
@@ -275,7 +275,7 @@ $myHttp.get('/path', function(data) {
 
 此外，下面是一个关于数据是怎么在同一个model的service之间通信的简介
 
-```javascript
+```
 App.factory('myFoo',['$http',function($http) {
   //any variables defined in this area will be ACCESSIBLE
   //within the any of the other services which are defined
